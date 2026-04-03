@@ -8,6 +8,8 @@ export interface Book {
   coverImage: string;
   status: "available" | "coming-soon";
   purchaseUrl?: string;
+  /** Link to the interactive flipbook preview */
+  readUrl?: string;
   themes: string[];
 }
 
@@ -24,6 +26,7 @@ export const books: Book[] = [
     coverImage: "/images/books/book-1.jpg",
     status: "available",
     purchaseUrl: "#",
+    readUrl: "/read/a-new-beginning",
     themes: ["Adoption", "Grief & Loss", "Belonging", "Safe Adults", "Family"],
   },
   {
