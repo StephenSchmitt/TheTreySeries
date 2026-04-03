@@ -204,28 +204,48 @@ export default function HomePage() {
                 {/* Cover text overlay for Book One */}
                 {book.id === 1 && (
                   <div className="absolute inset-0 z-10 flex flex-col justify-between pointer-events-none">
-                    <div className="relative pt-[10%] px-[6%]">
-                      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-transparent" />
+                    <div className="relative flex flex-col items-center" style={{ paddingTop: "6%", paddingBottom: "3%" }}>
+                      <div
+                        className="absolute inset-0"
+                        style={{
+                          background:
+                            "linear-gradient(to bottom, rgba(15,30,50,0.52) 0%, rgba(15,30,50,0.38) 35%, rgba(15,30,50,0.14) 70%, transparent 100%)",
+                        }}
+                      />
                       <p
-                        className="relative text-center text-white font-bold leading-[1.15] drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]"
+                        className="relative text-center font-bold leading-[1.2] tracking-[0.02em]"
                         style={{
                           fontFamily: "var(--font-cover)",
-                          fontSize: "clamp(0.65rem, 4.5cqi, 1.3rem)",
-                          textShadow: "0 1px 6px rgba(0,0,0,0.35)",
+                          fontSize: "clamp(0.6rem, 5cqi, 1.2rem)",
+                          color: "#fffdf8",
+                          textShadow:
+                            "0 2px 10px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.35), 0 0 16px rgba(0,0,0,0.15)",
+                          paddingTop: "3%",
+                          paddingLeft: "8%",
+                          paddingRight: "8%",
                         }}
                       >
                         Trey: A New Beginning
                       </p>
                     </div>
-                    <div className="relative pb-[22%] px-[6%]">
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/8 to-transparent" />
+                    <div className="relative flex flex-col items-center" style={{ paddingBottom: "20%", paddingTop: "3%" }}>
+                      <div
+                        className="absolute inset-0"
+                        style={{
+                          background:
+                            "linear-gradient(to top, rgba(15,30,50,0.45) 0%, rgba(15,30,50,0.2) 50%, transparent 100%)",
+                        }}
+                      />
                       <p
-                        className="relative text-center text-white/90 font-medium drop-shadow-[0_1px_4px_rgba(0,0,0,0.4)]"
+                        className="relative text-center font-semibold tracking-[0.06em]"
                         style={{
                           fontFamily: "var(--font-cover)",
-                          fontSize: "clamp(0.4rem, 2.2cqi, 0.65rem)",
-                          fontStyle: "italic",
-                          textShadow: "0 1px 4px rgba(0,0,0,0.3)",
+                          fontSize: "clamp(0.35rem, 2.2cqi, 0.6rem)",
+                          color: "rgba(255,253,248,0.92)",
+                          textShadow:
+                            "0 1px 6px rgba(0,0,0,0.45), 0 0 3px rgba(0,0,0,0.25)",
+                          paddingLeft: "8%",
+                          paddingRight: "8%",
                         }}
                       >
                         Dr. Victoria Schmitt

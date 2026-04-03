@@ -12,16 +12,26 @@ interface BookCardProps {
 function CoverOverlay({ title, author }: { title: string; author: string }) {
   return (
     <div className="absolute inset-0 z-10 flex flex-col justify-between pointer-events-none">
-      {/* Top title area */}
-      <div className="relative pt-[10%] px-[8%]">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-transparent" />
-        <div className="relative text-center">
+      {/* Top gradient + title */}
+      <div className="relative flex flex-col items-center" style={{ paddingTop: "6%", paddingBottom: "4%" }}>
+        {/* Soft vignette gradient — taller coverage, gentle falloff */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(15,30,50,0.52) 0%, rgba(15,30,50,0.38) 35%, rgba(15,30,50,0.14) 70%, transparent 100%)",
+          }}
+        />
+        <div className="relative px-[10%] text-center" style={{ paddingTop: "4%" }}>
           <h4
-            className="text-white font-bold leading-[1.15] drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]"
+            className="font-bold leading-[1.2] tracking-[0.02em]"
             style={{
               fontFamily: "var(--font-cover)",
-              fontSize: "clamp(1.1rem, 4.5cqi, 2rem)",
-              textShadow: "0 1px 8px rgba(0,0,0,0.35), 0 0 2px rgba(0,0,0,0.2)",
+              fontSize: "clamp(1.15rem, 5.5cqi, 2.2rem)",
+              color: "#fffdf8",
+              textShadow:
+                "0 2px 12px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.35), 0 0 20px rgba(0,0,0,0.15)",
+              wordSpacing: "0.04em",
             }}
           >
             {title}
@@ -29,20 +39,30 @@ function CoverOverlay({ title, author }: { title: string; author: string }) {
         </div>
       </div>
 
-      {/* Bottom author area */}
-      <div className="relative pb-[8%] px-[8%]">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/10 to-transparent" />
-        <p
-          className="relative text-center text-white/90 font-medium tracking-wide drop-shadow-[0_1px_4px_rgba(0,0,0,0.4)]"
+      {/* Bottom gradient + author */}
+      <div className="relative flex flex-col items-center" style={{ paddingBottom: "7%", paddingTop: "4%" }}>
+        <div
+          className="absolute inset-0"
           style={{
-            fontFamily: "var(--font-cover)",
-            fontSize: "clamp(0.55rem, 2.2cqi, 0.85rem)",
-            fontStyle: "italic",
-            textShadow: "0 1px 6px rgba(0,0,0,0.3)",
+            background:
+              "linear-gradient(to top, rgba(15,30,50,0.45) 0%, rgba(15,30,50,0.25) 40%, rgba(15,30,50,0.06) 75%, transparent 100%)",
           }}
-        >
-          {author}
-        </p>
+        />
+        <div className="relative px-[10%] text-center">
+          <p
+            className="font-semibold tracking-[0.06em]"
+            style={{
+              fontFamily: "var(--font-cover)",
+              fontSize: "clamp(0.5rem, 2.5cqi, 0.9rem)",
+              color: "rgba(255,253,248,0.92)",
+              textShadow:
+                "0 1px 8px rgba(0,0,0,0.45), 0 0 3px rgba(0,0,0,0.25)",
+              letterSpacing: "0.08em",
+            }}
+          >
+            {author}
+          </p>
+        </div>
       </div>
     </div>
   );
