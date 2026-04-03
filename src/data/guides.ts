@@ -1,0 +1,163 @@
+export interface Guide {
+  id: number;
+  bookId: number;
+  slug: string;
+  title: string;
+  subtitle?: string;
+  summary: string;
+  description: string;
+  coverImage: string;
+  status: "available" | "coming-soon";
+  purchaseUrl?: string;
+  audiences: string[];
+  features: string[];
+}
+
+export const guides: Guide[] = [
+  {
+    id: 1,
+    bookId: 1,
+    slug: "companion-guide-one",
+    title: "Companion Guide: A New Beginning",
+    subtitle: "Companion Guide One",
+    summary:
+      "A thoughtful resource for parents, caregivers, educators, and counselors to support children through conversations about adoption, loss, and finding family.",
+    description:
+      "This companion guide pairs with Trey: A New Beginning to help the adults in a child's life navigate sensitive topics with warmth and confidence. Inside, you'll find guided questions, reflective prompts, calming activities, and supportive language frameworks designed to open doors for meaningful conversations about grief, belonging, and the many ways families are formed through love.",
+    coverImage: "/images/guides/guide-1.jpg",
+    status: "available",
+    purchaseUrl: "#",
+    audiences: [
+      "Parents & Adoptive Families",
+      "Foster Caregivers",
+      "Teachers & Educators",
+      "Counselors & Therapists",
+      "Social Workers",
+    ],
+    features: [
+      "Guided conversation starters for each chapter",
+      "Emotional validation frameworks for caregivers",
+      "Calm, supportive language suggestions",
+      "Reflective journaling prompts for families",
+      "Connection-building activities for children and adults",
+      "Gentle approaches to discussing grief and loss",
+    ],
+  },
+  {
+    id: 2,
+    bookId: 2,
+    slug: "companion-guide-two",
+    title: "Companion Guide: Book Two",
+    subtitle: "Companion Guide Two",
+    summary: "A companion resource for Book Two. Coming soon.",
+    description: "",
+    coverImage: "/images/guides/guide-2.jpg",
+    status: "coming-soon",
+    audiences: [],
+    features: [],
+  },
+  {
+    id: 3,
+    bookId: 3,
+    slug: "companion-guide-three",
+    title: "Companion Guide: Book Three",
+    subtitle: "Companion Guide Three",
+    summary: "A companion resource for Book Three. Coming soon.",
+    description: "",
+    coverImage: "/images/guides/guide-3.jpg",
+    status: "coming-soon",
+    audiences: [],
+    features: [],
+  },
+  {
+    id: 4,
+    bookId: 4,
+    slug: "companion-guide-four",
+    title: "Companion Guide: Book Four",
+    subtitle: "Companion Guide Four",
+    summary: "A companion resource for Book Four. Coming soon.",
+    description: "",
+    coverImage: "/images/guides/guide-4.jpg",
+    status: "coming-soon",
+    audiences: [],
+    features: [],
+  },
+  {
+    id: 5,
+    bookId: 5,
+    slug: "companion-guide-five",
+    title: "Companion Guide: Book Five",
+    subtitle: "Companion Guide Five",
+    summary: "A companion resource for Book Five. Coming soon.",
+    description: "",
+    coverImage: "/images/guides/guide-5.jpg",
+    status: "coming-soon",
+    audiences: [],
+    features: [],
+  },
+  {
+    id: 6,
+    bookId: 6,
+    slug: "companion-guide-six",
+    title: "Companion Guide: Book Six",
+    subtitle: "Companion Guide Six",
+    summary: "A companion resource for Book Six. Coming soon.",
+    description: "",
+    coverImage: "/images/guides/guide-6.jpg",
+    status: "coming-soon",
+    audiences: [],
+    features: [],
+  },
+  {
+    id: 7,
+    bookId: 7,
+    slug: "companion-guide-seven",
+    title: "Companion Guide: Book Seven",
+    subtitle: "Companion Guide Seven",
+    summary: "A companion resource for Book Seven. Coming soon.",
+    description: "",
+    coverImage: "/images/guides/guide-7.jpg",
+    status: "coming-soon",
+    audiences: [],
+    features: [],
+  },
+  {
+    id: 8,
+    bookId: 8,
+    slug: "companion-guide-eight",
+    title: "Companion Guide: Book Eight",
+    subtitle: "Companion Guide Eight",
+    summary: "A companion resource for Book Eight. Coming soon.",
+    description: "",
+    coverImage: "/images/guides/guide-8.jpg",
+    status: "coming-soon",
+    audiences: [],
+    features: [],
+  },
+  {
+    id: 9,
+    bookId: 9,
+    slug: "companion-guide-nine",
+    title: "Companion Guide: Book Nine",
+    subtitle: "Companion Guide Nine",
+    summary: "A companion resource for Book Nine. Coming soon.",
+    description: "",
+    coverImage: "/images/guides/guide-9.jpg",
+    status: "coming-soon",
+    audiences: [],
+    features: [],
+  },
+  {
+    id: 10,
+    bookId: 10,
+    slug: "companion-guide-ten",
+    title: "Companion Guide: Book Ten",
+    subtitle: "Companion Guide Ten",
+    summary: "A companion resource for Book Ten. Coming soon.",
+    description: "",
+    coverImage: "/images/guides/guide-10.jpg",
+    status: "coming-soon",
+    audiences: [],
+    features: [],
+  },
+];

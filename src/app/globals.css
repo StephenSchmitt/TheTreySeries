@@ -1,26 +1,139 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-teal-50: #f0fdfa;
+  --color-teal-100: #ccfbf1;
+  --color-teal-200: #99f6e4;
+  --color-teal-300: #5eead4;
+  --color-teal-400: #2dd4bf;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+  --color-teal-700: #0f766e;
+  --color-teal-800: #115e59;
+  --color-teal-900: #134e4a;
+
+  --color-ocean-50: #eff8ff;
+  --color-ocean-100: #dbeafe;
+  --color-ocean-200: #bfdbfe;
+  --color-ocean-300: #93c5fd;
+  --color-ocean-400: #60a5fa;
+  --color-ocean-500: #3b82f6;
+  --color-ocean-600: #2563eb;
+  --color-ocean-700: #1d4ed8;
+  --color-ocean-800: #1e3a5f;
+  --color-ocean-900: #0f2744;
+  --color-ocean-950: #0a1929;
+
+  --color-coral-50: #fff7ed;
+  --color-coral-100: #ffedd5;
+  --color-coral-200: #fed7aa;
+  --color-coral-300: #fdba74;
+  --color-coral-400: #fb923c;
+  --color-coral-500: #f97316;
+  --color-coral-600: #ea580c;
+
+  --color-sand-50: #fefce8;
+  --color-sand-100: #fef9c3;
+  --color-sand-200: #fef08a;
+  --color-sand-300: #fde047;
+  --color-sand-400: #facc15;
+  --color-sand-500: #eab308;
+
+  --color-aqua-50: #ecfeff;
+  --color-aqua-100: #cffafe;
+  --color-aqua-200: #a5f3fc;
+  --color-aqua-300: #67e8f9;
+  --color-aqua-400: #22d3ee;
+  --color-aqua-500: #06b6d4;
+  --color-aqua-600: #0891b2;
+  --color-aqua-700: #0e7490;
+  --color-aqua-800: #155e75;
+
+  --color-warm-50: #fdf8f0;
+  --color-warm-100: #f5ebe0;
+  --color-warm-200: #e8d5c0;
+  --color-warm-300: #d4b896;
+  --color-warm-400: #c09e74;
+  --color-warm-500: #a67c52;
+
+  --font-sans: "Nunito", "Quicksand", system-ui, -apple-system, sans-serif;
+  --font-heading: "Quicksand", "Nunito", system-ui, -apple-system, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #f0fdfa 0%, #ffffff 30%, #eff8ff 70%, #f0fdfa 100%);
+  color: #1e3a5f;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: #99f6e4;
+  color: #0f2744;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.4; }
+}
+
+@keyframes bubble-rise {
+  0% { transform: translateY(100%) scale(0.4); opacity: 0; }
+  20% { opacity: 0.6; }
+  100% { transform: translateY(-100vh) scale(1); opacity: 0; }
+}
+
+@keyframes gentle-wave {
+  0%, 100% { transform: translateX(0) scaleY(1); }
+  50% { transform: translateX(-25px) scaleY(0.95); }
+}
+
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+.animate-float-delay { animation: float 6s ease-in-out 2s infinite; }
+.animate-shimmer { animation: shimmer 3s ease-in-out infinite; }
+.animate-gentle-wave { animation: gentle-wave 8s ease-in-out infinite; }
+
+.ocean-gradient {
+  background: linear-gradient(135deg, #0f2744 0%, #1e3a5f 25%, #0e7490 60%, #14b8a6 100%);
+}
+
+.ocean-gradient-light {
+  background: linear-gradient(135deg, #f0fdfa 0%, #ecfeff 30%, #dbeafe 70%, #ccfbf1 100%);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.glow-teal {
+  box-shadow: 0 0 40px rgba(20, 184, 166, 0.15), 0 0 80px rgba(20, 184, 166, 0.05);
+}
+
+.glow-ocean {
+  box-shadow: 0 0 40px rgba(14, 116, 144, 0.12), 0 0 80px rgba(14, 116, 144, 0.04);
+}
+
+.text-gradient-ocean {
+  background: linear-gradient(135deg, #0e7490, #14b8a6, #0891b2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
