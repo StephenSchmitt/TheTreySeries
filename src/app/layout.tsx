@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito, Quicksand } from "next/font/google";
+import { Nunito, Quicksand, Playfair_Display } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import OceanBackground from "@/components/OceanBackground";
@@ -13,6 +13,12 @@ const nunito = Nunito({
 
 const quicksand = Quicksand({
   variable: "--font-quicksand",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
   display: "swap",
 });
@@ -76,7 +82,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${nunito.variable} ${quicksand.variable} h-full antialiased`}
+      className={`${nunito.variable} ${quicksand.variable} ${playfair.variable} h-full antialiased`}
     >
       <body
         className="min-h-full flex flex-col"

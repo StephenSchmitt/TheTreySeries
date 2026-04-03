@@ -191,6 +191,7 @@ export default function HomePage() {
                     ? "shadow-lg hover:shadow-xl cursor-pointer"
                     : "opacity-60"
                 }`}
+                style={{ containerType: "inline-size" }}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-teal-100 to-ocean-100" />
                 <Image
@@ -200,8 +201,42 @@ export default function HomePage() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 18vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ocean-900/60 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-3">
+                {/* Cover text overlay for Book One */}
+                {book.id === 1 && (
+                  <div className="absolute inset-0 z-10 flex flex-col justify-between pointer-events-none">
+                    <div className="relative pt-[10%] px-[6%]">
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-transparent" />
+                      <p
+                        className="relative text-center text-white font-bold leading-[1.15] drop-shadow-[0_2px_6px_rgba(0,0,0,0.45)]"
+                        style={{
+                          fontFamily: "var(--font-cover)",
+                          fontSize: "clamp(0.65rem, 4.5cqi, 1.3rem)",
+                          textShadow: "0 1px 6px rgba(0,0,0,0.35)",
+                        }}
+                      >
+                        Trey: A New Beginning
+                      </p>
+                    </div>
+                    <div className="relative pb-[22%] px-[6%]">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/8 to-transparent" />
+                      <p
+                        className="relative text-center text-white/90 font-medium drop-shadow-[0_1px_4px_rgba(0,0,0,0.4)]"
+                        style={{
+                          fontFamily: "var(--font-cover)",
+                          fontSize: "clamp(0.4rem, 2.2cqi, 0.65rem)",
+                          fontStyle: "italic",
+                          textShadow: "0 1px 4px rgba(0,0,0,0.3)",
+                        }}
+                      >
+                        Dr. Victoria Schmitt
+                      </p>
+                    </div>
+                  </div>
+                )}
+                {book.id !== 1 && (
+                  <div className="absolute inset-0 bg-gradient-to-t from-ocean-900/60 to-transparent" />
+                )}
+                <div className="absolute bottom-0 left-0 right-0 p-3 z-20">
                   <span className="text-[10px] font-semibold uppercase tracking-wider text-teal-200">
                     {book.subtitle}
                   </span>
@@ -210,7 +245,7 @@ export default function HomePage() {
                   </p>
                 </div>
                 {book.status === "available" && (
-                  <span className="absolute top-2 right-2 w-3 h-3 rounded-full bg-teal-400 shadow-lg shadow-teal-400/50" />
+                  <span className="absolute top-2 right-2 w-3 h-3 rounded-full bg-teal-400 shadow-lg shadow-teal-400/50 z-20" />
                 )}
               </div>
             ))}

@@ -58,6 +58,7 @@
 
   --font-sans: "Nunito", "Quicksand", system-ui, -apple-system, sans-serif;
   --font-heading: "Quicksand", "Nunito", system-ui, -apple-system, sans-serif;
+  --font-cover: var(--font-playfair), "Georgia", "Times New Roman", serif;
 }
 
 html {
