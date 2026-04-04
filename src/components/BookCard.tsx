@@ -77,9 +77,9 @@ export default function BookCard({ book, featured = false, hideCoverText = false
       <div className="glass-card rounded-3xl overflow-hidden glow-teal">
         <div className="grid md:grid-cols-2 gap-0">
           {/* Cover image */}
-          <div className="relative aspect-[3/4] md:aspect-auto bg-gradient-to-br from-teal-100 to-ocean-100 flex items-center justify-center p-8">
+          <div className="relative bg-gradient-to-br from-teal-100 to-ocean-100 flex items-center justify-center p-8">
             <div
-              className="relative w-full max-w-[280px] aspect-[2/3] rounded-2xl overflow-hidden shadow-2xl"
+              className="book-cover-container relative shadow-2xl"
               style={{ containerType: "inline-size" }}
             >
               <Image
@@ -166,76 +166,78 @@ export default function BookCard({ book, featured = false, hideCoverText = false
         !isAvailable ? "opacity-75" : "glow-teal"
       }`}
     >
-      {/* Cover */}
-      <div className="relative aspect-[2/3] bg-gradient-to-br from-teal-50 to-ocean-50 flex items-center justify-center p-6">
-        <div
-          className="relative w-full h-full rounded-xl overflow-hidden shadow-lg"
-          style={{ containerType: "inline-size" }}
-        >
-          <Image
-            src={book.coverImage}
-            alt={`${book.title} cover`}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-500"
-            sizes="(max-width: 640px) 80vw, (max-width: 1024px) 40vw, 280px"
-          />
-          {showOverlay && (
-            <CoverOverlay title="Trey: A New Beginning" author="Dr. Victoria Schmitt" />
-          )}
-        </div>
-        <span
-          className={`absolute top-4 right-4 px-3 py-1 text-xs font-semibold rounded-full shadow ${
-            isAvailable
-              ? "bg-teal-500 text-white"
-              : "bg-white/80 text-ocean-600"
-          }`}
-        >
-          {isAvailable ? "Available" : "Coming Soon"}
-        </span>
-      </div>
-
-      {/* Info */}
-      <div className="p-5">
-        {book.subtitle && (
-          <span className="text-[10px] font-semibold uppercase tracking-widest text-teal-500">
-            {book.subtitle}
-          </span>
-        )}
-        <h3
-          className="text-lg font-bold text-ocean-800 mt-1 leading-snug"
-          style={{ fontFamily: "var(--font-heading)" }}
-        >
-          {book.title}
-        </h3>
-        <p className="mt-2 text-sm text-ocean-600 leading-relaxed line-clamp-3">
-          {book.summary}
-        </p>
-        {isAvailable && (
-          <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
-            {book.purchaseUrl && (
-              <Link
-                href={book.purchaseUrl}
-                className="inline-flex items-center text-sm font-semibold text-teal-600 hover:text-teal-700 transition-colors"
-              >
-                Get This Book
-                <svg className="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            )}
-            {book.readUrl && (
-              <Link
-                href={book.readUrl}
-                className="inline-flex items-center text-sm font-semibold text-ocean-600 hover:text-ocean-700 transition-colors"
-              >
-                Read Preview
-                <svg className="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </Link>
+      <div className="flex flex-col sm:flex-row">
+        {/* Cover */}
+        <div className="relative bg-gradient-to-br from-teal-50 to-ocean-50 flex items-center justify-center p-5 shrink-0">
+          <div
+            className="book-cover-container relative shadow-lg"
+            style={{ containerType: "inline-size" }}
+          >
+            <Image
+              src={book.coverImage}
+              alt={`${book.title} cover`}
+              fill
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+              sizes="280px"
+            />
+            {showOverlay && (
+              <CoverOverlay title="Trey: A New Beginning" author="Dr. Victoria Schmitt" />
             )}
           </div>
-        )}
+          <span
+            className={`absolute top-3 right-3 px-3 py-1 text-xs font-semibold rounded-full shadow ${
+              isAvailable
+                ? "bg-teal-500 text-white"
+                : "bg-white/80 text-ocean-600"
+            }`}
+          >
+            {isAvailable ? "Available" : "Coming Soon"}
+          </span>
+        </div>
+
+        {/* Info */}
+        <div className="p-5 flex flex-col justify-center">
+          {book.subtitle && (
+            <span className="text-[10px] font-semibold uppercase tracking-widest text-teal-500">
+              {book.subtitle}
+            </span>
+          )}
+          <h3
+            className="text-lg font-bold text-ocean-800 mt-1 leading-snug"
+            style={{ fontFamily: "var(--font-heading)" }}
+          >
+            {book.title}
+          </h3>
+          <p className="mt-2 text-sm text-ocean-600 leading-relaxed line-clamp-3">
+            {book.summary}
+          </p>
+          {isAvailable && (
+            <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+              {book.purchaseUrl && (
+                <Link
+                  href={book.purchaseUrl}
+                  className="inline-flex items-center text-sm font-semibold text-teal-600 hover:text-teal-700 transition-colors"
+                >
+                  Get This Book
+                  <svg className="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              )}
+              {book.readUrl && (
+                <Link
+                  href={book.readUrl}
+                  className="inline-flex items-center text-sm font-semibold text-ocean-600 hover:text-ocean-700 transition-colors"
+                >
+                  Read Preview
+                  <svg className="ml-1 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </Link>
+              )}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

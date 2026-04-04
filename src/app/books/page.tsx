@@ -58,7 +58,7 @@ export default function BooksPage() {
             title="The Complete Series"
             subtitle="Nine more adventures await beneath the waves. Each book continues Trey's journey of growth, connection, and belonging."
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
             {futureBooks.map((book) => (
               <BookCard key={book.id} book={book} />
             ))}
