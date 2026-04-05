@@ -23,6 +23,11 @@
     },
     {
       "type": "front",
+      "role": "authorQuote",
+      "src": "/images/books/trey-book-01/front-04.png"
+    },
+    {
+      "type": "front",
       "role": "authorsNotes",
       "src": "/images/books/trey-book-01/front-05.png"
     },
