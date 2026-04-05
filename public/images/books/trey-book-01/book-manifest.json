@@ -12,6 +12,21 @@
       "src": "/images/books/trey-book-01/front-01.png"
     },
     {
+      "type": "front",
+      "role": "dedication",
+      "src": "/images/books/trey-book-01/front-02.png"
+    },
+    {
+      "type": "front",
+      "role": "copyright",
+      "src": "/images/books/trey-book-01/front-03.png"
+    },
+    {
+      "type": "front",
+      "role": "authorsNotes",
+      "src": "/images/books/trey-book-01/front-05.png"
+    },
+    {
       "type": "story",
       "pageNumber": 1,
       "src": "/images/books/trey-book-01/page-01.png"
