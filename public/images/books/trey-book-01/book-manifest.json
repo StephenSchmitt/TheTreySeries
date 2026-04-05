@@ -1,96 +1,96 @@
 {
-  "bookId": "Trey-Book1",
+  "bookId": "trey-book-01",
   "title": "Trey: A New Beginning",
   "pages": [
     {
       "type": "front",
       "role": "titlePage",
-      "src": "/images/books/Trey-Book1/front-01.png"
+      "src": "/images/books/trey-book-01/front-01.png"
     },
     {
       "type": "front",
       "role": "dedication",
-      "src": "/images/books/Trey-Book1/front-02.png"
+      "src": "/images/books/trey-book-01/front-02.png"
     },
     {
       "type": "front",
       "role": "copyright",
-      "src": "/images/books/Trey-Book1/front-03.png"
+      "src": "/images/books/trey-book-01/front-03.png"
     },
     {
       "type": "front",
       "role": "authorQuote",
-      "src": "/images/books/Trey-Book1/front-04.png"
+      "src": "/images/books/trey-book-01/front-04.png"
     },
     {
       "type": "front",
       "role": "authorsNotes",
-      "src": "/images/books/Trey-Book1/front-05.png"
+      "src": "/images/books/trey-book-01/front-05.png"
     },
     {
       "type": "story",
       "pageNumber": 1,
-      "src": "/images/books/Trey-Book1/page-01.png"
+      "src": "/images/books/trey-book-01/page-01.png"
     },
     {
       "type": "story",
       "pageNumber": 2,
-      "src": "/images/books/Trey-Book1/page-02.png"
+      "src": "/images/books/trey-book-01/page-02.png"
     },
     {
       "type": "story",
       "pageNumber": 3,
-      "src": "/images/books/Trey-Book1/page-03.png"
+      "src": "/images/books/trey-book-01/page-03.png"
     },
     {
       "type": "story",
       "pageNumber": 4,
-      "src": "/images/books/Trey-Book1/page-04.png"
+      "src": "/images/books/trey-book-01/page-04.png"
     },
     {
       "type": "story",
       "pageNumber": 5,
-      "src": "/images/books/Trey-Book1/page-05.png"
+      "src": "/images/books/trey-book-01/page-05.png"
     },
     {
       "type": "story",
       "pageNumber": 6,
-      "src": "/images/books/Trey-Book1/page-06.png"
+      "src": "/images/books/trey-book-01/page-06.png"
     },
     {
       "type": "story",
       "pageNumber": 7,
-      "src": "/images/books/Trey-Book1/page-07.png"
+      "src": "/images/books/trey-book-01/page-07.png"
     },
     {
       "type": "story",
       "pageNumber": 8,
-      "src": "/images/books/Trey-Book1/page-08.png"
+      "src": "/images/books/trey-book-01/page-08.png"
     },
     {
       "type": "story",
       "pageNumber": 9,
-      "src": "/images/books/Trey-Book1/page-09.png"
+      "src": "/images/books/trey-book-01/page-09.png"
     },
     {
       "type": "story",
       "pageNumber": 10,
-      "src": "/images/books/Trey-Book1/page-10.png"
+      "src": "/images/books/trey-book-01/page-10.png"
     },
     {
       "type": "story",
       "pageNumber": 11,
-      "src": "/images/books/Trey-Book1/page-11.png"
+      "src": "/images/books/trey-book-01/page-11.png"
     },
     {
       "type": "story",
       "pageNumber": 12,
-      "src": "/images/books/Trey-Book1/page-12.png"
+      "src": "/images/books/trey-book-01/page-12.png"
     },
     {
       "type": "story",
       "pageNumber": 13,
-      "src": "/images/books/Trey-Book1/page-13.png"
+      "src": "/images/books/trey-book-01/page-13.png"
     }
   ]
 }

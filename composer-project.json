@@ -52,7 +52,8 @@
               "textBgShadowEnabled": false
             }
           ],
-          "originalFilename": "page-01-original.png"
+          "originalFilename": "page-01-original.png",
+          "_renderHash": "-c1ro0z"
         },
         {
           "canvasWidth": 2000,
@@ -657,24 +658,24 @@
       ],
       "frontMatter": {
         "titlePage": {
-          "html": "<h1>Trey:</h1><h1>A New Beginning</h1><p></p>",
-          "_renderHash": "-d8yd4y"
+          "html": "<h1>Trey: </h1><h1>A New Beginning</h1><p></p>",
+          "_renderHash": "-w5g8ts"
         },
         "dedication": {
-          "html": "<p style=\"text-align: left;\"><strong>Dedication</strong></p><p style=\"text-align: left;\">To all the little hearts navigating big feelings—May you learn that your emotions matter, that love is always within reach, and that empathy can change the world.</p>",
-          "_renderHash": "ce32yn"
+          "html": "<p style=\"text-align: left;\"><strong>Dedication </strong></p><p style=\"text-align: left;\">To all the little hearts navigating big feelings—May you learn that your emotions matter, that love is always within reach, and that empathy can change the world.</p>",
+          "_renderHash": "-qnp7bl"
         },
         "copyright": {
-          "html": "<p style=\"text-align: left;\"><strong>Trey: A New Beginning</strong></p><p style=\"text-align: left;\">Copyright © 2026 Dr. Victoria Schmitt<br>All rights reserved.<br><br></p><p style=\"text-align: left;\">No part of this book may be reproduced or transmitted in any form or by any means, electronic or mechanical, including photocopying, recording, or by any information storage and retrieval system, without permission in writing from the publisher, except for brief quotations in reviews.<br></p><p style=\"text-align: left;\">Printed in the United States of America.</p><p style=\"text-align: left;\">First edition</p>",
-          "_renderHash": "-970otl"
+          "html": "<p style=\"text-align: left;\"><strong>Trey: A New Beginning </strong></p><p style=\"text-align: left;\">Copyright © 2026 Dr. Victoria Schmitt<br>All rights reserved.<br><br></p><p style=\"text-align: left;\">No part of this book may be reproduced or transmitted in any form or by any means, electronic or mechanical, including photocopying, recording, or by any information storage and retrieval system, without permission in writing from the publisher, except for brief quotations in reviews.<br></p><p style=\"text-align: left;\">Printed in the United States of America.</p><p style=\"text-align: left;\">First edition</p>",
+          "_renderHash": "9hsb6z"
         },
         "authorQuote": {
-          "html": "<p><em>\"Every new Beginning starts with a little courage\"</em></p>",
-          "_renderHash": "-d33bfb"
+          "html": "<p><em>\"Every new Beginning starts with a little courage\" </em></p>",
+          "_renderHash": "sodgtx"
         },
         "authorsNotes": {
-          "html": "<p style=\"text-align: left;\"><strong>Author’s Note</strong></p><p style=\"text-align: left;\">This story was written to remind children that new beginnings can feel a little scary, but they are also full of possibility. Through Trey’s journey, I hope young readers learn that courage, kindness, and believing in themselves can help them grow in beautiful ways.</p><p style=\"text-align: left;\">— Dr. Victoria Schmitt</p>",
-          "_renderHash": "pfgv96"
+          "html": "<p style=\"text-align: left;\"><strong>Author’s Note </strong></p><p style=\"text-align: left;\">This story was written to remind children that new beginnings can feel a little scary, but they are also full of possibility. Through Trey’s journey, I hope young readers learn that courage, kindness, and believing in themselves can help them grow in beautiful ways.</p><p style=\"text-align: left;\">— Dr. Victoria Schmitt</p>",
+          "_renderHash": "cgdml0"
         }
       }
     }
