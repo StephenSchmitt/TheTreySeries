@@ -27,11 +27,6 @@
       "src": "/images/books/trey-book-01/front-04.png"
     },
     {
-      "type": "front",
-      "role": "authorsNotes",
-      "src": "/images/books/trey-book-01/front-05.png"
-    },
-    {
       "type": "story",
       "pageNumber": 1,
       "src": "/images/books/trey-book-01/page-01.png"
@@ -95,6 +90,46 @@
       "type": "story",
       "pageNumber": 13,
       "src": "/images/books/trey-book-01/page-13.png"
+    },
+    {
+      "type": "story",
+      "pageNumber": 14,
+      "src": "/images/books/trey-book-01/page-14.png"
+    },
+    {
+      "type": "story",
+      "pageNumber": 15,
+      "src": "/images/books/trey-book-01/page-15.png"
+    },
+    {
+      "type": "story",
+      "pageNumber": 16,
+      "src": "/images/books/trey-book-01/page-16.png"
+    },
+    {
+      "type": "story",
+      "pageNumber": 17,
+      "src": "/images/books/trey-book-01/page-17.png"
+    },
+    {
+      "type": "story",
+      "pageNumber": 18,
+      "src": "/images/books/trey-book-01/page-18.png"
+    },
+    {
+      "type": "story",
+      "pageNumber": 19,
+      "src": "/images/books/trey-book-01/page-19.png"
+    },
+    {
+      "type": "story",
+      "pageNumber": 20,
+      "src": "/images/books/trey-book-01/page-20.png"
+    },
+    {
+      "type": "story",
+      "pageNumber": 21,
+      "src": "/images/books/trey-book-01/page-21.png"
     }
   ]
 }
